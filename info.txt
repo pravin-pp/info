@@ -1,3 +1,6 @@
+https://raw.githubusercontent.com/spring-cloud/spring-cloud-pipelines/master/concourse/whats_my_ip.sh
+https://raw.githubusercontent.com/spring-cloud/spring-cloud-pipelines/master/concourse/login.sh
+
 https://raw.githubusercontent.com/spring-cloud/spring-cloud-pipelines/master/buildSrc/src/test/resources/project_customizer/common/src/main/bash/pipeline.sh
 
 build_and_upload.sh 
@@ -25,5 +28,16 @@ https://raw.githubusercontent.com/spring-io/artifactory-resource/master/ci/scrip
 https://raw.githubusercontent.com/spring-io/concourse-java-scripts/master/concourse-java.sh
 
 https://raw.githubusercontent.com/spring-projects/spring-boot/master/ci/scripts/promote.sh
+
+https://raw.githubusercontent.com/spring-cloud/spring-cloud-pipelines/master/concourse/whats_my_ip.sh
+https://raw.githubusercontent.com/spring-cloud/spring-cloud-pipelines/master/concourse/login.sh
+
+https://raw.githubusercontent.com/spring-cloud/spring-cloud-pipelines/master/buildSrc/src/test/resources/project_customizer/common/src/main/bash/pipeline.sh
+
+
+https://raw.githubusercontent.com/spring-cloud/spring-cloud-pipelines/master/concourse/tasks/resource-utils.sh
+
+https://raw.githubusercontent.com/spring-cloud/spring-cloud-pipelines/master/concourse/tasks/generate-settings.sh
+
 
 
