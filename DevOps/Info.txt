@@ -1,0 +1,294 @@
+Continuous Deployment is a Continuous Delivery pipeline with no manual gates between initial code commit / check-in and production.
+
+DevOps practice of Continuous Testing synchronizes Testing/QA with Dev and Ops processes optimized to achieve business and development goals.
+
+Different Types of Testing that can be automated
+
+Unit Testing
+Integration Testing
+Functional Testing
+Smoke Testing
+Regression Testing
+
+
+A build pipeline is an automated system responsible for Continuous Integration. It builds code, runs unit tests, creates packages, etc.
+
+Release management is the process of managing, planning, scheduling and controlling a software build through different stages and environments; including testing and deploying software releases.
+
+Deployment Pipeline is an automated manifestation of the process for getting software from version control into the hands of users.
+
+Patterns in Deployment Pipeline
+Build Things Once
+Execute Tests in Parallel
+Design Parallel Workflows
+Verify on Environments similar to Production
+Manage Environment in a Pipeline
+
+
+Metrics in DevOps
+
+Cycle Analytics - Cycle Analytics measures the time it takes to go from an idea to production for each project you have.
+
+Defect Density - Defects detected divided by total lines of code or number of components.
+
+Cycle Time - The cycle time is the period required to complete one cycle of an operation, function, or process.
+
+
+ChatOps is a digital-age manifestation of Conversation-driven Collaboration, that allows people to:
+
+Work together
+Work better
+Simplify daily operations
+Team Collaboration and conversations happen in Chat clients and ChatOps is often aided by a Conversational AI-based Bot that can trigger tasks and provide information for simple English commands.
+
+ChatOps connects people, bots, and tools in an automated and transparent workflow, making information readily available from a chat window.
+
+ChatOps is as much a cultural change as a technology change. It removes the disconnect between tasks and the conversations, Bringing more Transparency.
+
+ChatOps functionalities usually have bots that can connect to several apps. Bots are capable of performing variety of tasks inside the chat, like:
+
+Code deployment
+Software test kick off
+Issue logging and tracking
+Server reboots
+As an added bonus, chat application contains clear record of all discussions and scripts executed—something very handy for*** root cause analysis and troubleshooting***.
+
+Popular Chat Clients: Slack, HipChat, flowdock and Campfire
+
+Chatbots can help DevOps teams in automating repetitive tasks which are otherwise done manually by team.
+
+Scheduling assistants
+Activity reports
+Team productivity ledgers
+News Broadcast
+Emojis ... thousands of bots can be integrated into chat rooms to post automatic updates or trigger functionality when prompted.
+As team collaboration moves from email to chat, DevOps is trying to automate the testing and deployment of software using Chatbots.
+
+Popular Chatbots: Hubot, Err, Jirio and Lita
+
+
+Continuous Deployment
+
+According to Martin Fowler, "It’s hard enough for software developers to write code that works on their machine. But even when that’s done, there’s a long journey from there to software that’s producing value - since software only produces value when it’s in production".
+
+Continuous Deployment (CD), which is a practice that enables automatic deployment of software to production.
+
+Continuous Deployment is a software development practice, where software is built in such a way that it can be released automatically to production any time.
+
+CD is a logical extension of Continuous Integration, which together aims at giving developers and end users an incredible experience by:
+
+Detecting bugs at an early stage.
+Ensuring seamless deployments to all environments
+
+Adapt Continuous Deployment for a stable and reliable release.
+
+Why CD ?
+
+Reduced cycle time: Reduces the time it takes from the development of code to the changed code being used by users in production.
+
+Zero downtime releases: Frequent deployment of changes enables negligible production downtime.
+
+High quality: Issues detected early and fixed immediately, ensures the best quality of the end product.
+
+Immediate user feedback: Frequent deployment enables quick user feedback.
+
+
+--------------
+
+Integrating Environment Configuration
+Environment configuration details can be integrated at:
+
+Build time: Build scripts pulls the details and integrates with the build deliverables.
+Package creation
+Deployment time: As part of the installation, deployment scripts will fetch and pass the required details to the application.
+Design the application to pull the details during the run time or start up.
+
+--------------
+
+Environment Configuration: Practices
+Avoid integrating configuration during build or packaging time. If included at this stage:
+
+Same executables cannot be deployed to all environments.
+
+Supply configuration information for different environments using the same source or mechanism.
+
+---------------
+
+Continuous Integration
+The process of automatically triggering build and testing, when a developer checks in a change to the version control is known as Continuous Integration.
+
+--------------
+
+User Acceptance Testing
+
+It is the last stage of the application's testing cycle.
+This test is done using real-time scenarios to verify if the specifications are met.
+Also known as Operational Acceptance Testing (OAT) or end-user testing.
+
+Types of UAT
+Alpha & Beta testing: Improves usability of the end product.
+
+Alpha: Testing is done in development environment.
+
+Beta: Testing is done in customer environment.
+
+Contract Acceptance testing : Testing is done to ensure criteria and specifications agreed in the contract are met.
+
+Regulation Acceptance testing: Tests if the software complies with the regulations.
+Operational Acceptance testing: Tests the operational readiness of the application (such as security, backup, and recovery tests).
+
+Functional testing is a verification activity, while UAT is a validation activity.
+
+Capacity Testing
+
+Scalability testing: 
+1) Checks the response time of Individual request.
+2) Simultaneous user requests. More servers, services etc., added appropriately based on the test results.
+
+Longevity testing:
+
+1) Measures the system performance.
+2) Assesses stability problems
+
+
+Throughput testing:
+
+1) Checks capability of the system to handle:
+- *Transactions*.
+- *Messages or page hits per second*. 
+
+Load testing:
+1)Checks capability of application to handle an increase in load.
+
+
+Capacity Testing Practices
+Do testing in a production like an environment.
+Trigger only if the change passes the acceptance test.
+Carefully verify if failures are due to capacity issues (it may fail due to interface issues as well).
+
+Manual Testing
+Manual testing is done to ensure if the application is delivering the value as expected by the users.
+
+Types of manual testing:
+
+Showcases:
+1) Functionality demonstrated to users frequently during development.
+2) Specification issues are identified at an early stage.
+
+Exploratory testing:
+
+1) Explores application features.
+2) Leads to creation of a new set of test cases.
+3) Captures new requirements for the application.
+
+Usability testing:
+1) Determines if the application is useful, usable, accessible and desirable.
+
+Smoke Testing
+1) Originated from hardware testing (a device when switched on is tested for smoke or fire).
+2) Also known as build verification testing.
+3) Not a comprehensive testing with limited test cases.
+4) Positive scenarios are tested with valid data.
+5) Ensures critical functionalities are working.
+6) Identifies issues introduced due to components integration.
+
+Automate the tests (like unit, component, acceptance).
+Trigger tests when a change is done to the code, configuration or the environment.
+Perform manual testing continuously throughout the project.
+Always improve the testing strategy.
+
+-------------
+
+Automated implementation of an application’s build, test, deploy and release process is known as deployment pipeline.
+Deployment Pipeline...
+Any change in application’s configuration, source code, data or environment triggers a new instance of the pipeline.
+In the pipeline, binaries and installers are created first.
+Tests are run on the binaries.
+A combination of code, configuration, data, and the environment is considered releasable only after passing the pipeline successfully.
+
+Commit Stage :
+The commit stage includes:
+
+Code compilation
+Execution of commit tests
+Binaries creation (for use at later stages)
+Static code analysis
+Artifacts creation (like test databases)
+The release candidate is created after passing this stage.
+Eliminates the code changes that are unfit for production.
+Reports at the earliest to the developer if the application is broken.
+The owner is the developer
+
+
+Acceptance Testing Stage
+A critical threshold in the deployment pipeline.
+Takes delivery teams beyond basic continuous integration.
+Tests every version of the software that passes the commit stage.
+Changes that fails at this stage, is not deployed.
+Validates if the system meets the business criteria.
+
+
+Capacity Testing Stage
+Specific real-world scenarios are tested.
+Practices to follow:
+1) Set threshold limit for concluding the test result.
+2) Plan short duration tests.
+3) Tests must be repeatable.
+4) Run tests sequentially or parallelly based on need (like load and longevity are run parallelly).
+
+Manual Testing Stage
+1) Ensures system is usable and fulfills its requirements.
+2) Detects bugs that are not identified in the previous stages.
+This stage includes:
+-  **U**ser ***A***cceptance ***T***esting 
+
+-  ***Testing in*** an ***exploratory*** or ***integration environment***.
+
+
+Release Stage
+Delivers the system to users:
+- ***As packaged software*** or 
+
+- ***Deploys it*** into a production or staging environment.
+Also known as deployment stage.
+Steps to deploy or release software:
+
+Create and manage the infrastructure (like hardware, networking, etc.) on which your application will run.
+Install the correct version of the application.
+Configure the application, including any data it requires.
+
+
+Dependencies occur, when a piece of code depends on:
+
+another part of the code (components) or
+
+software (like libraries) to build or run.
+
+Dependencies are represented by a Directed Acyclic Graph.
+
+Dependency Types
+Build-time: To be present when the code is compiled and linked.
+
+Run-time: To be present when the application runs in an environment
+
+--------------
+
+Metrics
+
+Mentioned here are few metrics to track the continuous deployment journey:
+
+Velocity: Metric to measure the ability of the team to complete changes.
+
+Regression Test Duration: Regression testing is done to ensure that the changes had not introduced new issues. Track the time taken to devise measures to enable quick deployments.
+
+Number of open issues: Issues that are reported before a successful deployment.
+
+Percentage of failed deployments: Measure of deployments that have failed.
+
+Broken Build Time: Time taken to fix broken builds.
+
+Mean Time to Recover: Time taken to resolve an issue after it is reported.
+
+Cycle Time: Time taken between the change and release.
+
+
