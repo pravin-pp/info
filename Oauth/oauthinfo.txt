@@ -1,0 +1,6 @@
+RemoteTokenServices : for validation of token with oauth server.
+
+ResourceServerSecurityConfigurer : contains oauth setup
+
+ResourceServerConfiguration : main entry point for oauth @EnableResourceServer during setup application context setup
+
