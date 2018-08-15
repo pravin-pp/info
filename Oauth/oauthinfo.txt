@@ -4,3 +4,39 @@ ResourceServerSecurityConfigurer : contains oauth setup
 
 ResourceServerConfiguration : main entry point for oauth @EnableResourceServer during setup application context setup
 
+Remote Token 
+
+private String getAuthorizationHeader(String clientId, String clientSecret) {
+
+		if(clientId == null || clientSecret == null) {
+			logger.warn("Null Client ID or Client Secret detected. Endpoint that requires authentication will reject request with 401 error.");
+		}
+
+		String creds = String.format("%s:%s", clientId, clientSecret);
+		try {
+			return "Basic " + new String(Base64.encode(creds.getBytes("UTF-8")));
+		}
+		catch (UnsupportedEncodingException e) {
+			throw new IllegalStateException("Could not convert String");
+		}
+	}
+  
+  Oauth Authentication manager : 
+  
+  private AuthenticationManager oauthAuthenticationManager(HttpSecurity http) {
+		OAuth2AuthenticationManager oauthAuthenticationManager = new OAuth2AuthenticationManager();
+		if (authenticationManager != null) {
+			if (authenticationManager instanceof OAuth2AuthenticationManager) {
+				oauthAuthenticationManager = (OAuth2AuthenticationManager) authenticationManager;
+			}
+			else {
+				return authenticationManager;
+			}
+		}
+		oauthAuthenticationManager.setResourceId(resourceId);
+		oauthAuthenticationManager.setTokenServices(resourceTokenServices(http));
+		oauthAuthenticationManager.setClientDetailsService(clientDetails());
+		return oauthAuthenticationManager;
+	}
+  
+  
