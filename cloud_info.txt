@@ -1,0 +1,2 @@
+Cloud provider : 
+AWS, Google cloud, vmware, joynet, rackspace, azure, ibm cloud, digital ocean, terremark 
